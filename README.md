@@ -6,8 +6,4 @@
 
 ## Introduction
 
-This is the code and hosting location for the **[Heupr](https://heupr.io/)** website!  
-
-## Status
-
-The static code has yet to be moved to this repository. Currently, this code is in the **[`heupr/heupr`](https://github.com/heupr/heupr)** repository.  
+This is the repository and hosting location for the **[Heupr](https://heupr.github.io/)** website! It will primarily serve as a landing page for users to get an overview of the project and to provide the necessary resources for downloading and using the application. The site is hosted through [GitHub Pages](https://pages.github.com/).  
