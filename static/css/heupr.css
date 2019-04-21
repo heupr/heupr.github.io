@@ -117,7 +117,10 @@ ul li a {
 }
 
 .info p {
-  padding: 0.2rem;
+  padding-top: 0.2rem;
+  padding-bottom: 1rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
 }
 
 .install {
