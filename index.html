@@ -14,15 +14,41 @@
     </ul>
     <header id="intro">
       <div class="container">
-        <h2>Manage technical debt with machine learning</h2>
+        <h2>Automate project management</h2>
         <div class="intro">
-          <p>Heupr is an open source service that offers a variety of features including bug assignment, task labeling, and duplicate issue identification to help manage your GitHub projects.<br><br>Follow our GitHub Project board <a href="https://github.com/orgs/heupr/projects">here</a> to stay up-to-date on product features and releases or contribute to the codebase on <a href="https://github.com/heupr">GitHub</a>!</p>
+          <p>Heupr is an extensible open source service that provides "plug-n-play" functionality for a variety of project management features.<br><br>Follow our GitHub Project board <a href="https://github.com/orgs/heupr/projects">here</a> to stay up-to-date on product features or contribute to the codebase on <a href="https://github.com/heupr">GitHub</a>!</p>
           <div class="buttons">
-            <div class="button install">
-              <a href="https://github.com/heupr/heupr">DOWNLOAD</a>
+            <div class="button download">
+              <a href="https://github.com/heupr/heupr">GITHUB</a>
             </div>
             <div class="button learn-more">
               <a href="#about">LEARN MORE</a>
+            </div>
+            <div class="button">
+              <form action="https://github.com/settings/apps/new" method="post">
+                <input type="hidden" name="manifest" id="manifest">
+                <button class="install">INSTALL</button>
+              </form>
+              <script>
+                input = document.getElementById("manifest")
+                input.value = JSON.stringify({
+                  "name": "Heupr",
+                  "url": "https://heupr.github.io",
+                  "hook_attributes": {
+                    "url": "https://b7apkrultd.execute-api.us-east-1.amazonaws.com/prod/events",
+                  },
+                  "redirect_url": "https://b7apkrultd.execute-api.us-east-1.amazonaws.com/prod/install",
+                  "public": true,
+                  "default_permissions": {
+                    "issues": "write",
+                    "pull_request": "write"
+                  },
+                  "default_events": [
+                    "issues",
+                    "pull_request"
+                  ]
+                })
+              </script>
             </div>
           </div>
         </div>
@@ -32,14 +58,17 @@
       <div class="container">
         <h3>Features</h3>
         <div class="info">
-          <p class="feature"><b>Assignment</b><br>Too many issues piling up? Heupr automatically assigns contributors to review new issues and stay ahead of backlog. <b>COMING SOON!</b></p>
-          <p class="feature"><b>Labeling</b><br>Can't figure out what's what? Heupr parses and categorizes new issues by placing labels that you specify on them. <b>COMING SOON!</b></p>
-          <p class="feature"><b>Duplicates</b><br>Feel like you're seeing double? Heupr identifies when an issue is raised that duplicates one previously opened. <b>COMING SOON!</b></p>
-          <p class="feature"><b>Estimates</b><br>Unsure how accurate projections are? Heupr compares pull request estimates to actual completion time for progress analysis. <b>COMING SOON!</b></p>
+          <p class="feature"><b>Estimates</b><br>Unsure how accurate projections are? Heupr compares pull request estimates to actual completion time for progress analysis.</p>
+          <p class="feature"><b>Assignment</b><br>Too many issues piling up? Heupr automatically assigns contributors to review new issues and stay ahead of backlog.</p>
+          <p class="feature"><b>And more...</b><br>Don't see what you need? Check out third-party packages provided by the community or feel free to create your own!</p>
+          <!-- <p class="feature"><b>Labeling</b><br>Can't figure out what's what? Heupr parses and categorizes new issues by placing labels that you specify on them. <b>COMING SOON!</b></p> -->
+          <!-- <p class="feature"><b>Duplicates</b><br>Feel like you're seeing double? Heupr identifies when an issue is raised that duplicates one previously opened. <b>COMING SOON!</b></p> -->
         </div>
-        <h3>Setup</h3>
+        <h3>Usage</h3>
         <div class="info">
-          <p class="step">We're currently revamping the application - instructions coming soon!</p>
+          <p class="feature"><b>Setup</b><br>Click the "INSTALL" button above and following the instructions to set up an instance of the GitHub app.</p>
+          <p class="feature"><b>Configure</b><br>Next add a `.heupr.yml` config file to your target repos with the packages and settings you'd like to include.</p>
+          <p class="feature"><b>Use</b><br>That's it! You've got a fully functioning instance of Heupr running and helping you manage your projects.<br></p>
         </div>
         <h3>Team</h3>
         <div class="info">

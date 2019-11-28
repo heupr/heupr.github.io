@@ -12,6 +12,15 @@ body, html {
   font-family: "Roboto Mono", sans-serif;
 }
 
+button {
+  border-radius: 5px;
+  display: block;
+  font-weight: 500;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+
 h2 {
   padding-top: 12rem;
   padding-bottom: 2rem;
@@ -100,6 +109,15 @@ ul li a {
   margin: 0 20%;
 }
 
+.download {
+  background-color: #FF7700;
+}
+
+.download a:hover {
+  color: #FF7700;
+  background-color: #FFFFFF;
+}
+
 .footer {
   margin-top: 4rem;
 }
@@ -124,12 +142,16 @@ ul li a {
 }
 
 .install {
-  background-color: #FF7700;
+  background-color: #0CB300;
+  color: #FFFFFF;
+  border-color: #0CB300;
 }
 
-.install a:hover {
-  color: #FF7700;
+.install:hover {
+  color: #0CB300;
   background-color: #FFFFFF;
+  cursor: pointer;
+  border-color: #FFFFFF;
 }
 
 .intro {
@@ -142,11 +164,11 @@ ul li a {
 }
 
 .learn-more {
-  background-color: #3884ff;
+  background-color: #3884FF;
 }
 
 .learn-more a:hover {
-  color: #3884ff;
+  color: #3884FF;
   background-color: #FFFFFF;
 }
 
