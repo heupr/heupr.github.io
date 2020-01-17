@@ -163,6 +163,10 @@ ul li a {
   background-color: #FFFFFF;
 }
 
+.mobile {
+  display: none;
+}
+
 .nav {
   position: fixed;
   background-color: #DC143C;
@@ -182,4 +186,48 @@ ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 480px) {
+  h2 {
+    padding-top: 6rem;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+
+  ul li a {
+    padding-left: 0;
+  }
+
+  .buttons {
+    display: none;
+  }
+
+  .container {
+    margin: 0 1rem;
+    padding: 0;
+  }
+
+  .info {
+    display: block;
+  }
+
+  .info p {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .intro {
+    display: block;
+  }
+
+  .mobile {
+    display: inline;
+  }
+
+  .team-member {
+    display: none;
+  }
 }
