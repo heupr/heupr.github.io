@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="static/css/heupr.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="static/img/favicon.ico" />
@@ -40,10 +41,12 @@
                 "redirect_url": "https://3trlkvrb46.execute-api.us-east-1.amazonaws.com/prod/install",
                 "public": true,
                 "default_events": [
-                  "issues"
+                  "issues",
+                  "pull_request"
                 ],
                 "default_permissions": {
-                  "issues": "write"
+                  "issues": "write",
+                  "pull_requests": "write"
                 }
               })
             </script>
