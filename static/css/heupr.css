@@ -87,6 +87,7 @@ ul li a {
 .button {
   border-radius: 5px;
   margin: 0.4rem;
+  cursor: not-allowed;
 }
 
 .button a {
@@ -136,6 +137,7 @@ ul li a {
   background-color: #0CB300;
   color: #FFFFFF;
   border-color: #0CB300;
+  pointer-events: none;
 }
 
 .install:hover {
